@@ -3,7 +3,7 @@ import IdCard from "./IdCard";
 
 export default function Hero() {
   return (
-    <section className="mx-auto flex max-w-6xl flex-col items-center gap-16 px-6 py-15 md:flex-row md:justify-between">
+    <section className="mx-auto flex max-w-6xl flex-col items-center gap-16 px-10 py-20 md:flex-row md:justify-between">
       
       <div className="max-w-xl">
         <div className="mb-4 flex items-center gap-2 text-sm font-semibold tracking-widest text-blue-600">
