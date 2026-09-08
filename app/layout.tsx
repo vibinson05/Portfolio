@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Vibinson Raj G" }],
   creator: "Vibinson Raj G",
   icons: {
-  icon: "/image.png",
+  icon: "/image.jpg",
 },
 }
 
