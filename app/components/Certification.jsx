@@ -1,36 +1,47 @@
 "use client";
 
 import { FiExternalLink, FiCalendar, FiAward } from "react-icons/fi";
-import { FaAws } from "react-icons/fa";
+import { FaAws, FaBrain, FaPython, FaShieldAlt } from "react-icons/fa";
 
 
-/*
+
 const CERTIFICATIONS = [
   {
-    title: "AWS Certified Cloud Practitioner",
-    issuer: "Amazon Web Services (AWS)",
-    icon: FaAws,
+    title: "Python Programming",
+    issuer: "Guvi",
+    icon: FaPython,
     iconClass: "text-orange-500 bg-orange-50",
-    issueDate: "Nov 2025",
-    expiryDate: "Nov 2028",
-    credentialId: "AWS-CCP-XXXXXX", // Replace with your actual Credential ID
-    credentialUrl: "https://www.linkedin.com/in/your-profile", // Replace with LinkedIn/Credly link
+    issueDate: "Aug 2023",
+    expiryDate: "Aug 2023",
+    credentialId: "aq9M0C62h46073Ryf1", 
+    credentialUrl: "https://www.guvi.in/certificate?id=aq9M0C62h46073Ryf1", 
     verified: true,
   },
   
   {
-    title: "Security Certification Placeholder",
-    issuer: "Security Organization",
-    icon: FaAws, 
+    title: "AI For India 2.0",
+    issuer: "Guvi",
+    icon: FaBrain, 
     iconClass: "text-blue-500 bg-blue-50",
-    issueDate: "Coming Soon",
-    expiryDate: "—",
-    credentialId: "PENDING",
-    credentialUrl: "#",
-    verified: false,
+    issueDate: "Aug 2023",
+    expiryDate: "Aug 2023",
+    credentialId: "041p0356858eQ2k9u1",
+    credentialUrl: "https://www.guvi.in/certificate?id=041p0356858eQ2k9u1",
+    verified: true,
+  },
+   {
+    title: "Introduction to Cybersecurity",
+    issuer: "Cisco Academy",
+    icon: FaShieldAlt, 
+    iconClass: "text-blue-500 bg-blue-50",
+    issueDate: "Mar 2026",
+    expiryDate: "Mar 2026",
+    credentialId: "041p0356858eQ2k9u1",
+    credentialUrl: "https://www.credly.com/badges/45b31100-2144-4e16-a694-41c63d45497c/public_url",
+    verified: true,
   }
 ];
-*/
+
 
 export default function Certifications() {
   return (
@@ -49,65 +60,48 @@ export default function Certifications() {
           </p>
         </div>
 
-        
-        <div className="rounded-2xl border border-dashed border-slate-200 bg-slate-50/50 p-16 text-center shadow-sm">
-          <div className="flex flex-col items-center justify-center space-y-4">
-            <span className="flex h-12 w-12 items-center justify-center rounded-full bg-slate-100 text-slate-400">
-              <FiAward className="h-6 w-6" />
-            </span>
-            <div className="space-y-1.5">
-              <h3 className="text-sm font-semibold text-slate-700">Certifications Under Progress</h3>
-              <p className="mx-auto max-w-xs text-xs text-slate-400 leading-relaxed">
-                Certification verification and details are currently being updated. Please check back later.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        
-        {/*
-        <div className="rounded-2xl border border-slate-100 bg-slate-50/50 p-6 shadow-sm">
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <div className="rounded-2xl border border-slate-100 bg-slate-50/50 p-4 shadow-sm">
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
             {CERTIFICATIONS.map((cert, idx) => (
-              <div 
+              <div
                 key={idx}
-                className="group flex flex-col justify-between rounded-xl border border-slate-200/60 bg-white p-4 shadow-sm transition-all hover:border-slate-300 hover:shadow-md"
+                className="group flex flex-col justify-between rounded-lg border border-slate-200/60 bg-white p-3 shadow-sm transition-all hover:border-slate-300 hover:shadow-md"
               >
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between gap-2">
-                    <span className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-lg text-lg ${cert.iconClass}`}>
-                      <cert.icon className="h-5 w-5" />
+                <div className="space-y-2">
+                  <div className="flex items-center justify-between gap-1.5">
+                    <span className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-md text-base ${cert.iconClass}`}>
+                      <cert.icon className="h-3.5 w-3.5" />
                     </span>
                     {cert.verified && (
-                      <span className="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-2 py-0.5 text-[9px] font-semibold text-emerald-600">
+                      <span className="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-1.5 py-0.5 text-[8px] font-semibold text-emerald-600">
                         <span className="h-1 w-1 rounded-full bg-emerald-500" />
                         Verified
                       </span>
                     )}
                   </div>
                   <div>
-                    <span className="block text-[10px] font-bold text-slate-400 uppercase tracking-wider">
+                    <span className="block text-[9px] font-bold text-slate-400 uppercase tracking-wider">
                       {cert.issuer}
                     </span>
-                    <h3 className="mt-1 text-sm font-semibold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors">
+                    <h3 className="mt-0.5 text-xs font-semibold text-slate-900 leading-snug group-hover:text-blue-600 transition-colors">
                       {cert.title}
                     </h3>
                   </div>
                 </div>
-                <div className="mt-4 pt-3 border-t border-slate-100 space-y-2">
-                  <div className="flex items-center gap-1 text-[11px] text-slate-400">
-                    <FiCalendar className="h-3 w-3" />
+                <div className="mt-3 pt-2 border-t border-slate-100 space-y-1.5">
+                  <div className="flex items-center gap-1 text-[10px] text-slate-400">
+                    <FiCalendar className="h-2.5 w-2.5" />
                     <span>{cert.issueDate}</span>
                   </div>
                   {cert.credentialUrl && cert.credentialUrl !== "#" && (
-                    <a
-                      href={cert.credentialUrl}
+                    
+                    <a href={cert.credentialUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-[11px] font-semibold text-blue-600 hover:text-blue-700 hover:underline"
+                      className="inline-flex items-center gap-1 text-[10px] font-semibold text-blue-600 hover:text-blue-700 hover:underline"
                     >
                       Verify
-                      <FiExternalLink className="h-3 w-3" />
+                      <FiExternalLink className="h-2.5 w-2.5" />
                     </a>
                   )}
                 </div>
@@ -115,7 +109,6 @@ export default function Certifications() {
             ))}
           </div>
         </div>
-        */}
       </div>
     </section>
   );
